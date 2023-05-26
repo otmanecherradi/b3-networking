@@ -14,6 +14,7 @@
 #include "client.hpp"
 
 #define MESSAGE_LENGTH 128
+#define MAX_ATTEMTPS 8
 
 
 class Protocol {
