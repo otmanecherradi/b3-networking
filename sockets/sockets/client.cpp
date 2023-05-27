@@ -36,10 +36,11 @@ std::string Client::receive(int length) {
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
     auto i = ::recv(this->socket, buffer, length + 1, 0);
     std::cout << "i:: " << i << std::endl;
-    buffer[i] = 0;
+    std::cout << "length:: " << length << std::endl;
+//    buffer[i] = 0;
     std::string res(buffer, length);
     
-    std::cout << "Received:: " << res << std::endl;
+    std::cout << "Received:: " << res << ":" << std::endl;
     
     return res;
 };
